@@ -1,0 +1,91 @@
+/* Image-led editorial treatment for the private case review. */
+:root{--ink:#14243b;--fog:#f4f6f8;--line:#d8e0e9}
+.index-hero{padding:0;background:#172842;color:#fff}
+.index-hero .shell:after{display:none}
+.index-hero-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);align-items:stretch;max-width:1440px}
+.index-hero-copy{align-self:center;padding:84px clamp(32px,5vw,78px) 90px 0}
+.index-hero h1{max-width:760px;font-size:clamp(51px,5.45vw,78px);line-height:1.035}
+.index-hero .eyebrow{color:#a8c4ed!important}
+.index-hero p:not(.eyebrow){max-width:610px;color:#d5e0ed;font-size:clamp(16px,1.4vw,19px)}
+.index-hero-image,.hero-image{position:relative;display:block;min-width:0;margin:0;overflow:hidden;background:#293d55}
+.index-hero-image{min-height:560px;margin-right:calc(-1 * max(var(--pad), (100vw - 1440px) / 2 + var(--pad)))}
+.index-hero-image img,.hero-image img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover}
+.index-hero-image img{object-position:49% center}
+.index-hero-image:after,.hero-image:after,.card-image:after,.related-image:after{content:"";position:absolute;inset:auto 0 0;height:30%;background:linear-gradient(transparent,rgba(7,19,36,.67));pointer-events:none}
+.index-hero-image figcaption,.hero-image figcaption,.card-image figcaption,.related-image figcaption{position:absolute;z-index:1;right:17px;bottom:14px;left:17px;color:#fff;font-size:10px;font-weight:700;line-height:1.35;letter-spacing:.025em;text-shadow:0 1px 5px rgba(0,0,0,.5)}
+.index-intro{padding-top:52px;padding-bottom:52px}
+.index-intro h2{font-size:clamp(28px,3vw,38px)}
+.index-cases{padding-top:58px}
+.cases-grid{gap:22px}
+.case-card{min-height:0;padding:0;background:#fff;border-color:#d9e1eb}
+.case-card:before{display:none}
+.case-card .card-image,.related-card .related-image{position:relative;display:block;width:100%;margin:0;overflow:hidden;background:#263951}
+.case-card .card-image{height:245px}
+.case-card .card-image img,.related-card .related-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.case-card:hover .card-image img,.related-card:hover .related-image img{transform:scale(1.035)}
+.case-card .card-top,.case-card h3,.case-card p,.case-card b{margin-left:30px;margin-right:30px}
+.case-card .card-top{margin-top:30px}
+.case-card h3{margin-top:25px;margin-bottom:14px;font-size:clamp(24px,2.2vw,32px)}
+.case-card p{margin-bottom:25px}
+.case-card b{margin-top:auto;margin-bottom:30px}
+.page-hero{background:#f4f6f8}
+.hero-grid{grid-template-columns:minmax(0,1.06fr) minmax(380px,.94fr);min-height:570px}
+.hero-copy{padding-top:66px;padding-bottom:64px}
+.hero-copy h1{font-size:clamp(48px,5.05vw,75px)}
+.hero-visual{min-height:570px;padding:0;background:#1a2a40}
+.hero-visual:before{display:none}
+.hero-image{position:absolute;inset:0;width:100%;height:100%}
+.shift-band{background:#fff;border-bottom:1px solid var(--line)}
+.shift-inner{display:grid;grid-template-columns:160px minmax(0,1fr);gap:clamp(26px,4vw,60px);padding-top:44px;padding-bottom:46px}
+.shift-label{display:flex;flex-direction:column;gap:16px;padding-top:3px;color:var(--blue);font-size:10px;font-weight:800;letter-spacing:.12em;line-height:1.5}
+.shift-label b{padding-top:16px;border-top:1px solid var(--line);color:#6a7b92;font-size:10px;letter-spacing:.08em}
+.visual-board.shift-board{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);column-gap:clamp(25px,4vw,60px);row-gap:0;width:auto;max-width:none;padding:0;background:transparent;box-shadow:none}
+.shift-board .micro{grid-column:1/-1;margin-bottom:13px;color:var(--blue)}
+.shift-board strong{grid-column:1;grid-row:2/4;align-self:center;max-width:660px;margin:0;font-size:clamp(25px,2.4vw,34px)}
+.shift-board .signal{grid-column:2;grid-row:2;gap:8px;padding-top:0;border:0}
+.shift-board .signal span{min-height:70px;display:flex;align-items:center;background:#edf2f8;font-size:12px}
+.shift-board .visual-note{grid-column:2;grid-row:3;align-self:start;margin-top:13px;color:#5d6c80;font-size:12px}
+.body-grid{padding-top:76px}
+.related-grid{gap:22px}
+.related-card{min-height:0;padding:0}
+.related-card .related-image{height:185px}
+.related-card small,.related-card h3,.related-card p,.related-card b{margin-left:28px;margin-right:28px}
+.related-card small{margin-top:26px}
+.related-card h3{margin-top:19px}
+.related-card p{margin-bottom:24px}
+.related-card b{margin-top:auto;margin-bottom:28px}
+@media(max-width:1000px){
+  .index-hero-grid{grid-template-columns:1fr}
+  .index-hero-copy{padding:66px 0 61px}
+  .index-hero-image{min-height:360px;margin-left:calc(-1 * var(--pad));margin-right:calc(-1 * var(--pad))}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{min-height:420px;margin-left:calc(-1 * var(--pad));margin-right:calc(-1 * var(--pad))}
+  .shift-inner{grid-template-columns:1fr;gap:22px}
+  .shift-label{flex-direction:row;align-items:center;gap:18px}
+  .shift-label b{padding:0 0 0 18px;border-top:0;border-left:1px solid var(--line)}
+}
+@media(max-width:620px){
+  .index-hero-copy{padding:55px 0 52px}
+  .index-hero h1{font-size:clamp(46px,11vw,60px)}
+  .index-hero-image{min-height:280px}
+  .index-intro{padding-top:42px;padding-bottom:42px}
+  .index-cases{padding-top:40px}
+  .case-card .card-image{height:210px}
+  .case-card .card-top,.case-card h3,.case-card p,.case-card b{margin-left:23px;margin-right:23px}
+  .case-card .card-top{margin-top:24px}
+  .case-card h3{margin-top:23px;font-size:25px}
+  .case-card b{margin-bottom:25px}
+  .hero-copy{padding-top:34px;padding-bottom:45px}
+  .hero-copy h1{font-size:clamp(39px,10.4vw,48px)}
+  .hero-visual{min-height:290px;padding:0}
+  .shift-inner{padding-top:32px;padding-bottom:35px}
+  .shift-label{font-size:9px}
+  .visual-board.shift-board{display:block}
+  .shift-board .micro{margin-bottom:14px}
+  .shift-board strong{display:block;margin-bottom:24px;font-size:27px}
+  .shift-board .signal{padding-top:18px;border-top:1px solid var(--line)}
+  .shift-board .signal span{min-height:65px;padding:12px 9px;font-size:11px}
+  .shift-board .visual-note{margin-top:14px}
+  .related-card .related-image{height:170px}
+}
+@media(prefers-reduced-motion:reduce){.case-card .card-image img,.related-card .related-image img{transition:none}}
